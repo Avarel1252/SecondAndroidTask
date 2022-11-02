@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Second task</string>
+    <string name="contacts">Contacts</string>
+    <string name="add_contact">Add contact</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_career">Career</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_date_of_birth">Date of birth</string>
+    <string name="btn_save">save</string>
+</resources>

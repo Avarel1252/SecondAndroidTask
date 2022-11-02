@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="top_margin">16dp</dimen>
+    <dimen name="bot_margin">16dp</dimen>
+    <dimen name="navigBtn_size">50dp</dimen>
+
+    <dimen name="paddingIntoCard">8dp</dimen>
+    <dimen name="accImgSize">50dp</dimen>
+    <dimen name="cardCornerRadius">6dp</dimen>
+    <dimen name="cardStrokeWidth">1dp</dimen>
+    <dimen name="cardElevation">10dp</dimen>
+    <dimen name="cardMargin">8dp</dimen>
+
+    <dimen name="ic_size">110dp</dimen>
+    <dimen name="btn_add_photo">55dp</dimen>
+    <dimen name="btn_height">55dp</dimen>
+    <dimen name="btn_corner_radius">6dp</dimen>
+</resources>
