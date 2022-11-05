@@ -30,7 +30,7 @@ class AddContactDialogFragment : DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStyle(DialogFragment.STYLE_NORMAL,R.style.FullScreenDialogFragment)
+        setStyle(STYLE_NORMAL,R.style.FullScreenDialogFragment)
     }
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +43,11 @@ class AddContactDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setListeners()
+    }
+
+
+    private fun setListeners() {
         with(binding) {
             btnSave.setOnClickListener { returnUserInfo() }
             btnAddPhoto.setOnClickListener {
