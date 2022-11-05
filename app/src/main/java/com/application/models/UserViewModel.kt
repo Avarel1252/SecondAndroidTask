@@ -3,7 +3,7 @@ package com.application.models
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.getHardUsersList
+import com.application.getHardUsersList
 
 class UserViewModel : ViewModel() {
     private val _userLiveData = MutableLiveData<List<UserModel>>()

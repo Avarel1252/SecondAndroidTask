@@ -9,4 +9,4 @@ data class UserModel(
     val phone: String,
     val homeAddress: String,
     val dataBirth: String
-) : java.io.Serializable
+)

@@ -1,4 +1,4 @@
-package com
+package com.application
 
 import com.application.models.UserModel
 

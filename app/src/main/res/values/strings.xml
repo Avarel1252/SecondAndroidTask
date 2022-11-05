@@ -9,4 +9,7 @@
     <string name="hint_address">Address</string>
     <string name="hint_date_of_birth">Date of birth</string>
     <string name="btn_save">save</string>
+    <string name="necessary_field">necessary field</string>
+    <string name="career" translatable="false">%s</string>
+    <string name="username" translatable="false">%s</string>
 </resources>

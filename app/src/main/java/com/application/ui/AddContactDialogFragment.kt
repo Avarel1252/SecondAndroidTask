@@ -1,22 +1,23 @@
 package com.application.ui
 
-import android.app.Dialog
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia
 import androidx.fragment.app.DialogFragment
+import com.application.R
 import com.application.databinding.FragmentAddContactBinding
 import com.application.models.UserModel
 
 
 class AddContactDialogFragment : DialogFragment() {
+
     private lateinit var binding: FragmentAddContactBinding
     private var userPhotoUri = Uri.parse("")
+
     private val pickMedia = registerForActivityResult(PickVisualMedia()) { uri ->
         if (uri != null) {
             userPhotoUri = uri
@@ -27,12 +28,22 @@ class AddContactDialogFragment : DialogFragment() {
         const val TAG = "addContactDialog"
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(DialogFragment.STYLE_NORMAL,R.style.FullScreenDialogFragment)
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAddContactBinding.inflate(inflater, container, false).apply {
+        binding = FragmentAddContactBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        with(binding) {
             btnSave.setOnClickListener { returnUserInfo() }
             btnAddPhoto.setOnClickListener {
                 addPhoto()
@@ -40,7 +51,6 @@ class AddContactDialogFragment : DialogFragment() {
             }
             imgBtnBack.setOnClickListener { goBack() }
         }
-        return binding.root
     }
 
 
@@ -61,7 +71,7 @@ class AddContactDialogFragment : DialogFragment() {
                 )
                 dismiss()
             } else {
-                tInUsername.error = "necessary field"
+                tInUsername.error = getString(R.string.necessary_field)
             }
         }
     }

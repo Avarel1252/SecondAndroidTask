@@ -3,22 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    style="@style/Theme.AppCompat.DayNight.DialogWhenLarge"
     android:layout_height="match_parent"
     android:background="?backgroundColor">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/activity_horizontal_margin" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_end"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/activity_horizontal_margin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_topBar"
@@ -35,8 +22,10 @@
         app:constraint_referenced_ids="tv_contact,iv_accPhoto"
         app:layout_constraintBottom_toTopOf="@id/gl_topBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/imgBtn_back"
@@ -63,7 +52,7 @@
         android:layout_height="@dimen/ic_size"
         android:src="@drawable/ic_bacground_ellipse" />
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_add_photo"
         android:layout_width="@dimen/btn_add_photo"
         android:layout_height="@dimen/btn_add_photo"
@@ -78,12 +67,13 @@
 
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:constraint_referenced_ids="tIn_username,tIn_career,tIn_email,tIn_phone,tIn_address,tIn_dateBirth,btn_save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/gl_end"
-        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gl_topBar" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -182,4 +172,5 @@
         android:textAppearance="@style/Text.Input"
         app:backgroundTint="@color/orange"
         app:cornerRadius="@dimen/btn_corner_radius" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

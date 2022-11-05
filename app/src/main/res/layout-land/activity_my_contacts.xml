@@ -33,14 +33,14 @@
         app:constraint_referenced_ids="imgBtn_back,tv_contacts,imgBtn_search"
         app:flow_horizontalStyle="spread_inside" />
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/imgBtn_back"
         android:layout_width="@dimen/navigBtn_size"
         android:layout_height="@dimen/navigBtn_size"
         android:backgroundTint="@color/alpha0"
         android:src="@drawable/ic_arrow_back" />
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/imgBtn_search"
         android:layout_width="@dimen/navigBtn_size"
         android:layout_height="@dimen/navigBtn_size"

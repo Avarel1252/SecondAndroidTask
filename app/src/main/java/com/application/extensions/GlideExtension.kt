@@ -1,4 +1,4 @@
-package com.secondandroidtask.extensions
+package com.application.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

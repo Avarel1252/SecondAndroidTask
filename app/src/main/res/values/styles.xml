@@ -35,4 +35,9 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:background">@color/blue</item>
     </style>
+
+    <style name="FullScreenDialogFragment" parent="Theme.AppCompat.Light.DialogWhenLarge">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+    </style>
 </resources>
